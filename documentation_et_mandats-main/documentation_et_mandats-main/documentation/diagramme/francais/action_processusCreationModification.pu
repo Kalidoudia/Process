@@ -1,0 +1,89 @@
+@startuml "Processus de création ou modification d'une page"
+
+title Processus de création ou modification d'une page
+
+start
+:Consulter le mandat assigné
+(dépôt : mandats_artur);
+
+note right
+    Pour l'instant nous fonctionnons via Discord 
+    où il faut demander un mandat dans le canal
+    ([[https://discord.com/channels/1097611222981038220/1237049892694921390 Général]])
+  end note
+
+if (Modifier une page ou Créer une page ?) then
+  -> Modifier une page;
+  :Copier la page original avec EADuplicator;
+  :Créer une nouvelle branche à partir de la \n branche blocJavascript_elementor;
+  :Poussez votre branche dans le dépôt distant;
+  :Faire les modifications demandées dans le \n fichier javascript et dans le bloc elementor;
+  note right
+    Assurez-vous qu'il n'y ait qu'un seul bloc contenant du javascript 
+    
+    N'ajoutez que du javascript dans le bloc elementor javascript 
+    à moins d'une exception (demandez avant).
+
+    Le contenu du fichier javascript dans le dossier et le bloc elementor 
+    doivent être égaux, à part les balises <script></script> qui ne sont 
+    présents que dans le bloc elementor javascript.
+
+    Vous ne devez pas changer le nom du fichier js dans le dossier 
+    de la page que vous êtes en train de modifier. 
+  end note
+
+else
+  -> Créer une page;
+  :Créer la page dans Elementor;
+  :Créer le bloc elementor JS (voir comment le faire au point);
+  :Créer une nouvelle branche à partir de la \n branche blocJavascript_elementor;
+  :Poussez votre branche dans le dépôt distant;
+  :Créer le dossier avec le nom de la page\net le fichier javascript avec\nl'ID de l'URL (lors de l'édition avec Elementor);
+  note right
+    Copiez le code du fichier modeleDeBase.js directement 
+    dans le fichier js que vous venez de créer.
+
+    Assurez-vous qu'il n'y ait qu'un seul bloc contenant du javascript.
+
+    Les deux fichiers doivent avoir le même contenu (à l'exception 
+    des balises <script></script> au début et à la fin du bloc  
+    elementor html contenant le javascript).
+  end note
+  
+endif
+
+
+:Testez les modifications;
+
+:Commencez à documenter, créez les diagrammes et écrivez les commentaires principaux;
+
+repeat
+  :Lire les commentaires reçus et faites les modifications;
+  :Faites un pull request à la branche blocJavascript_elementor;
+  :Avertissez dans Discord dans ce canal et attendez les commentaires ([[https://discord.com/channels/1097611222981038220/1295184748729077862 canal de révision]]); 
+  :En attendant, complétez la documentation, peaufinez les diagrammes;
+while (J'ai reçu des commentaires me demandant d'améliorer)
+
+  :Peafiner les commentaires au besoin;
+
+  if (Modifier une page ou Créer une page ?) then
+    -> Modifier une page;
+      :Effacez la copie de la page;
+      note right
+        Ne faites cela que si tous a été testé et validé
+      end note
+    else
+    -> Créer une page;
+      :S'assurer que l'URL et le nom de la page soient adéquats;
+      note right
+        Vérifiez les conventions pour le nom de la page dans Elementor 
+        Consultez la méthode pour modifier l'URL
+        Faites valider le nom de l'URL de la page dans ce canal ([[https://discord.com/channels/1097611222981038220/1310264690517086288 canal de révision]])
+      end note
+  endif
+
+:Demandez un nouveau mandat;
+
+stop
+
+@enduml

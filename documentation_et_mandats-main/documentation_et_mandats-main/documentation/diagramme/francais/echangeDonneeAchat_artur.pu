@@ -1,0 +1,106 @@
+@startuml choix_image-generation-2
+
+title À mettre à jour 
+
+participant Navigateur as N
+participant Serveur as S
+participant "JavaScript" as JS
+
+N -> S : GET https://artur.art/custom-prints/
+N -> JS : clic sur un des boutons représentant un choix
+note right of N
+    LocalStorage après : selectedProduct: tableau ou Print ou mural]
+  ! Problème : ça utilise à la fois le localstorage (pour cette page), les cookies et les paramètres dans l'URL. 
+  ! Suite problème : C'est mélangeant et ça devrait être tout dans une même liste qui contient tout. 
+  ! À faire : créer une classe chargée globalement dans un fihchier JS disponible partout.
+end note
+
+N -> S : GET https://artur.art/selection-style/
+N -> JS : clic sur un style + Suivant 
+note right of N
+  Cookies après : selectedStyles: ["abstract","...",]
+  ! Problème : les cookies ne se mettent pas à jour quand on recule et clic sur un autre style
+  
+end note
+
+N -> S : GET https://artur.art/tinder-de-lart/
+N -> JS : clic sur une oeuvre : no, like, j'aime 
+note right of N
+  Cookies après : saved_products: [ {"14461":{"action":"love","name":"Fork and bottle","attribute":"Cubisme, Maximalist, Neutral, Urban","image":"https://artur.art/wp-content/uploads/2024/06/Labrona_Fork_and_Bottle_St-Denis.jpg","artist":"Labrona"}, {...}]
+  ! Problème : les cookies ne se mettent pas à jour quand on recule et clic sur un autre style
+end note
+
+N -> S : GET https://artur.art/selection-couleurs/
+N -> JS : clic sur une palette de couleurs et Suivant 
+note right of N
+  Cookies après : selectedColors : 03207a,74a5cf,c9fbfd,624a93,591041
+end note
+
+N -> S : GET https://artur.art/psycho-creatif/
+N -> JS : clic sur un format 
+note right of N
+  Cookies après : selectedFormat : Square ou ... ou ...
+end note
+
+' Juste pour le choix 
+N -> S : GET https://artur.art/image-generation-3/
+N -> JS : clic sur un choix  
+
+' Premier choix : quiz 
+note left of N
+    Choix quiz 
+end note
+
+note right of N
+    Cookies après : choixGeneration : quiz  
+end note
+
+N -> S : GET https://artur.art/selection-approache/
+N -> JS : clic sur un choix 
+note right of N
+    Cookies après : selectedApproach : par-identité ou ...   
+    ! Problème à la fois dans le paramètre URL et dans un cookie 
+end note
+
+N -> S : GET https://artur.art/selection-sous-approache/
+N -> JS : clic sur un choix + suivant 
+note right of N
+    Cookies après : selectedSubApproach : Passions ou ...   
+    ! Problème à la fois dans le paramètre URL et dans un cookie 
+end note
+
+N -> S : GET https://artur.art/image-generation-2/
+N -> JS : Répondre aux deux questions 
+N -> JS : clic sur format  
+note right of N
+    Cookies après : quizData : [{"label":"Question 1","question":"Quelle passion occupe une place centrale dans ta vie et pourquoi ? Peux-tu raconter un moment où cette passion t'a particulièrement animé(e) ?"},{"label":"Question 2","question":"Comment représenterais-tu cette passion en un symbole visuel ? Quelle image ou icône pourrait capturer l'essence de ce qui te passionne tant ?"}]   
+    ! Problème à la fois dans le paramètre URL et dans un cookie 
+end note
+
+N -> JS : clic sur Suivant après la génération d'image  
+note right of N
+    ! Problème était supposé sauvegarder l'image puis mettre l'image dans les cookies... 
+    ! Ça a été enlevé..  
+end note
+N -> S : GET https://artur.art/pagesdevente-copy-2/
+
+
+' Deuxième choix : par image de référence  
+note left of N
+    Choix image de référence 
+end note
+
+note right of N
+    Cookies après : choixGeneration : ref 
+end note
+
+N -> S : GET https://artur.art/image-generation-2/
+N -> JS : clic sur un choix  
+note right of N
+    ! Problème à la fois dans le paramètre URL et dans un cookie 
+    Cookies après : choixGeneration : quiz 
+end note
+
+
+
+@enduml

@@ -1,0 +1,789 @@
+@startuml navigation_artur
+ 
+skinparam titleFontName Roboto
+skinparam titleFontSize 40
+skinparam titleFontColor Green
+
+title Custom Styled Title
+title: Navigation entre les pages sur le site Artur.art
+
+
+class "Page d'Accueil" [[https://artur.art/]] {
+    * En-tête 
+        -- Section - Custom Art
+        ----> Lien - Personalized Prints 
+        ----> Lien - Custom Portraits  
+        ----> Lien - Bespoke Mural  
+        ----> Lien - Personalized Gifts  
+        ----> Lien - <del> Custom Art Consultations </del> : Pas actif
+        -- Section - Shop Art
+        ----> Lien - Original Artworks
+        ----> Lien - <del> Prints of Old Masters </del> : Pas actif
+        ----> Lien - Prints for Living Artists 
+        -- Section - Artists 
+        ----> Lien - Join Artur 
+        ----> Lien - Featured Artists 
+        -- Section - Services 
+        ----> Lien - Interior design 
+        ----> Lien - Request a Quote 
+        ----> Lien - Tutorial and Study cases 
+        ____----> Lien - Alice - Interior Designer
+        ____----> Lien - Dagenais Family
+        ____----> Lien - David - Financial advisor 
+        ----> Lien - <del> Partnerships & Collaborations </del> : Pas actif
+        -- Section - About us 
+        ----> Lien - Our Story 
+        ----> Lien - Contact us 
+        ----> Lien - Art vs IA 
+        ----> Lien - Art Democracy 
+        -- Section - Explore Styles 
+        ----> Lien - Abstract  
+        ----> Lien - Street 
+        ----> Lien - Pop
+        ----> Lien - Impressionnism 
+        ----> Lien - Minimalism 
+        ----> Lien - Surrealism 
+        -- Section - Explore Quiz 
+        ----> Lien - Crticial Engagement
+        ----> Lien - Thematic Stylistics
+        ----> Lien - Life Mission 
+        ----> Lien - Offering Emotion 
+        ----> Lien - Energies and Art 
+        ----> Lien - Memorable Nostalgia 
+    * Corps :
+        -- Bouton - Art Swiper 
+        -- Bouton - Bespoke       :dessous Canvas:
+        -- Bouton - Bespoke       :dessous Mural:
+        -- Bouton - Bespoke       :dessous Poster:
+        -- Bouton - Inventory     :dessous Canvas:
+        -- Bouton - Inventory     :dessous Poster:
+        -- Bouton - Next          :après avoir choisir style:
+        -- Input Texte - Question :remplir deux questions: 
+        -- Bouton - Collaboration 
+        -- Bouton - Durability 
+        -- Bouton - Authenticity    
+        -- Bouton - Humor 
+        -- Bouton - Creativity 
+        -- Bouton - Inclusivity
+        -- Bouton - Search by style?
+        -- Bouton - Search by Quizz?
+        -- Bouton - Buy existing works on Artur.
+        -- Bouton - How to design on AI?
+        -- Bouton - How to Create with an Artist?
+        -- Bouton - Request A quote? 
+        -- Bouton - FAQ about prints?
+        -- Bouton - FAQ about paintings?
+        -- Bouton - FAQ about Murals? 
+        -- Input Texte - <del> How do you ant to be remembered? </del> : Pas actif
+        -- Bouton - <del> Vibrant      </del> : Pas actif
+        -- Bouton - <del> Soothing     </del> : Pas actif
+        -- Bouton - <del> Inspiring    </del> : Pas actif
+        -- Bouton - <del> Personal     </del> : Pas actif
+        -- Bouton - <del> Inclusivity  </del> : Pas actif
+        -- Bouton - <del> Sensual      </del> : Pas actif
+        -- Bouton - <del> MY ART PIECE </del> : Pas actif 
+    * Bas de page :  
+}
+
+' Processus d'achat 
+class "custom-prints" [[https://artur.art/custom-prints/]] {
+    - Bouton - Starts at 20$ 
+    - Bouton - Starts at 200$
+    - Bouton - Starts at 2000$
+    - Bouton - Select :Print: 
+    - Bouton - Select :Tableau: 
+    - Bouton - Select :Mural: 
+}
+class "selection-style" [[https://artur.art/selection-style/]]{
+     -  Bouton - Suivant: 
+     -  Bouton - Je ne sais pas: 
+}
+class "tinder-de-lart" [[https://artur.art/tinder-de-lart/]] {
+    - Bouton - No
+    - Bouton - Love
+    - Bouton - Like
+}
+class "selection-couleurs" [[https://artur.art/selection-couleurs/]] {
+    - Bouton - Suivant
+}
+class "psycho-creatif" [[https://artur.art/psycho-creatif/]] {
+    - Bouton - vertical
+    - Bouton - square 
+    - Bouton - horizontal 
+}
+class "image-generation-3" [[https://artur.art/image-generation-3/]] {
+    - Bouton - Répondre à deux questions 
+    - Bouton - Soumettre une image
+}
+class "selection-sous-approache" [[https://artur.art/selection-sous-approache/?preview_id=27502&preview=true?post=27502&action=elementor]] {
+    - Bouton - Suivant
+}
+class "image-generation-2" [[https://artur.art/image-generation-2/]] {
+    - Bouton - Répondre à deux questions 
+}
+class "pagesdevente-copy-2" [[https://artur.art/pagesdevente-copy-2/]] {
+    - Bouton - Commander 
+}
+class "xproduction_processusvente_saoussenarfaoui-copy-copy" [[https://artur.art/xproduction_processusvente_saoussenarfaoui-copy-copy/]] {
+    - Bouton - Procéder au paiement 
+}
+class "xproduction_processusvente_saoussenarfaoui-copy" [[https://artur.art/xproduction_processusvente_saoussenarfaoui-copy-copy/]] {
+    - Bouton - ?? 
+}
+
+class "shop_v2" [[https://artur.art/shop_v2/]] {
+}
+
+class "artists-new" [[https://artur.art/artists-new/]] {
+    - Bouton - Artists 
+    - Bouton - Tutorial-page
+}
+
+class "discover-approaches" [[https://artur.art/discover-approaches/]] {
+    - Bouton - Learn more :en-dessous de The Art of Diversion:
+    - Bouton - Learn more :en-dessous de Art and Self:
+    - Bouton - Learn more :en-dessous de The gift that makes you cry:
+    - Bouton - Learn more :en-dessous de Message of art:
+    - Bouton - Learn more :en-dessous de My art style:
+    - Bouton - Learn more :en-dessous de Long live parody:
+}
+
+class "service-art" [[https://artur.art/service-art/]] {
+    - Bouton - Selectionner :en-dessous de Espace d'Accueil:
+    - Bouton - Selectionner :en-dessous de Couloir:
+    - Bouton - Selectionner :en-dessous de Bureaux:
+    - Bouton - Selectionner :en-dessous de Salle de réunion:
+    - Bouton - Selectionner :en-dessous de Espace de pause:
+    - Bouton - Selectionner :en-dessous de Mur d'extérieur:
+}
+
+class "fr/design-interieur" [[https://artur.art/fr/design-interieur/]] {
+    - Bouton - Selectionner :en-dessous de Salon:
+    - Bouton - Selectionner :en-dessous de Couloir:
+    - Bouton - Selectionner :en-dessous de Salle de bain:
+    - Bouton - Selectionner :en-dessous de Chambre:
+    - Bouton - Selectionner :en-dessous de Bureau:
+    - Bouton - Selectionner :en-dessous de Mur d'extérieur:
+}
+
+class "art-quote" [[https://artur.art/art-quote/]] {
+    - Formulaire - Request a quote 
+}
+class "contact-us" [[https://artur.art/contact-us/]] {
+    - Formulaire - Need help
+}
+
+class "fr/art-vs-ia-v1" [[https://artur.art/fr/art-vs-ia-v1/]] {
+    - lien - Télécharger mémoire de maîtrise
+}
+
+class "blog-art-and-democracy" [[https://artur.art/blog-art-and-democracy/]] {
+    - lien - Télécharger mémoire de maîtrise
+}
+
+class "tutorial-page" [[https://artur.art/tutorial-page/]] {
+}
+
+class "our-story" [[https://artur.art/our-story/]] {
+}
+
+class "abstract-art-v2" [[https://artur.art/abstract-art-v2/]] {
+}
+
+class "street-art-v2" [[https://artur.art/street-art-v2/]] {
+}
+
+class "pop-art-v2" [[https://artur.art/pop-art-v2/]] {
+}
+
+class "impressionism-art-v2" [[https://artur.art/impressionism-art-v2/]] {
+}
+
+class "minimalist-art-v2" [[https://artur.art/minimalist-art-v2/]] {
+}
+
+class "surrealist-art-v2" [[https://artur.art/surrealist-art-v2/]] {
+}
+
+class "boutique" [[https://artur.art/boutique/]]{    
+} 
+
+class "Bubble" [[https://app.artur.art/index1?approche=Pour%20offrir&blog=Choix%20du%20nom&needtutorial=yes]] {
+}
+
+class "Bubble_Swipe" [[https://app.artur.art/swipe]] {   
+}
+
+class "Alice - Interior Designer" [[https://artur.art/xproduction_case-study-alice_venusia-new]] {
+    - Lien - Alice - Interior Designer 
+}
+class "Dagenais Family" [[https://artur.art/xproduction_case-study-dagenais-family_venusia-new]] {
+    - Lien - Dagenais Family   
+}
+class "David - Financial advisor" [[https://artur.art/xproduction_case-study-david_venusia-new/]] {
+    - Lien - David - Financial advisor 
+}
+
+' Blogue de deuxième niveau : à deux degrés de séparation de image-generation 
+
+class "the-gift-that-brings-tears" [[https://artur.art/the-gift-that-brings-tears/]] {
+    - Select - :En-dessous de Name Selection: 
+    - Select - :En-dessous de Birth: 
+    - Select - :En-dessous de Birthday: 
+    - Select - :En-dessous de Proposal: 
+}
+class "vive-la-parodie-2" [[https://artur.art/vive-la-parodie-2/]]{
+    - Bouton - Select :en-dessous de Parody:
+    - Bouton - Select :en-dessous de Let’s Talk Politics:
+    - Bouton - Select :en-dessous de Deep Critique:
+    - Bouton - Select :en-dessous de The Art of Humor:
+}
+class "mon-style-dart-2" [[https://artur.art/mon-style-dart-2/]]{
+    - Bouton - Select :en-dessous de Paysage, mer et ciel:
+    - Bouton - Select :en-dessous de Animaux, oiseaux:
+    - Bouton - Select :en-dessous de Abstrait et conceptuel:
+    - Bouton - Select :en-dessous de Personnes et portraits:
+    - Bouton - Select :en-dessous de Fleurs et plantes:
+    - Bouton - Select :en-dessous de Architecture et villes:
+    - Bouton - Select :en-dessous de Nu et érotique:
+    - Bouton - Select :en-dessous de Transport et cartes:
+    - Bouton - Select :en-dessous de Impressionniste:
+    - Bouton - Select :en-dessous de Street Art:
+}
+class "message-de-lart" [[https://artur.art/message-de-lart/]]{
+    - Bouton - Select :en-dessous de Freedom:
+    - Bouton - Select :en-dessous de Equality:
+    - Bouton - Select :en-dessous de Protection of Life:
+    - Bouton - Select :en-dessous de Feministe:
+    - Bouton - Select :en-dessous de Environmentalist:
+    - Bouton - Select :en-dessous de By Passions:
+    - Bouton - Select :en-dessous de Racism and Black Lives:
+    - Bouton - Select :en-dessous de Education:
+    - Bouton - Select :en-dessous de Gender Identity Crisis:
+    - Bouton - Select :en-dessous de Sexuality:
+    - Bouton - Select :en-dessous de Death, Addiction, and Depression:
+    - Bouton - Select :en-dessous de Peace:
+}
+class "lart-et-soi-2" [[https://artur.art/lart-et-soi-2/]]{
+    - Bouton - Select :en-dessous de By Passions:
+    - Bouton - Select :en-dessous de By Memories:
+    - Bouton - Select :en-dessous de By Philosophies:
+    - Bouton - Select :en-dessous de By Culture:
+    - Bouton - Select :en-dessous de By By Psychology:
+    - Bouton - Select :en-dessous de By By Astrology or Numerology:
+    - Bouton - Select :en-dessous de By By Religion:
+    - Bouton - Select :en-dessous de By By Music:
+}
+class "fr/art-du-detournement" [[https://artur.art/fr/art-du-detournement/]]{
+    - Bouton - Select :en-dessous de Mes Héros d’Enfance:
+    - Bouton - Select :en-dessous de Mes Photos Mémorables:
+    - Bouton - Select :en-dessous de Mes Marques Préférées:
+    - Bouton - Select :en-dessous de Mes Artistes Favoris:
+}
+class "selection-approache" [[https://artur.art/selection-approache/?choix=quiz]] {
+    - Bouton - Par message
+    - Bouton - Pour offrir
+    - Bouton - Par identité 
+    - Bouton - Pour chaque endroit 
+    - Bouton - Par style 
+    - Bouton - Détournement
+    - Bouton - Parody 
+}
+
+' Blogue de premier niveau qui mène directement vers image-generation 
+class "blog-parody" [[https://artur.art/blog-parody/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-parlons-politique" [[https://artur.art/blog-parlons-politique/]]{
+    - Bouton - Générer votre image 
+}
+class "fr/blog-critique-profonde" [[https://artur.art/fr/blog-critique-profonde/]]{
+    - Bouton - Générer votre image 
+}
+class "fr/blog-art-humour" [[https://artur.art/fr/blog-art-humour/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-paysage-mer-et-ciel" [[https://artur.art/blog-paysage-mer-et-ciel/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-animaux-oiseaux" [[https://artur.art/blog-animaux-oiseaux/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-abstrait-et-conceptuel" [[https://artur.art/blog-abstrait-et-conceptuel/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-personnes-et-portraits" [[https://artur.art/blog-personnes-et-portraits/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-fleurs-et-plantes-2" [[https://artur.art/blog-fleurs-et-plantes-2/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-architecture-et-villes" [[https://artur.art/blog-architecture-et-villes/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-nu-et-erotique" [[https://artur.art/blog-nu-et-erotique/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-transport-et-cartes" [[https://artur.art/blog-transport-et-cartes/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-impressionniste" [[https://artur.art/blog-impressionniste/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-street-art" [[https://artur.art/blog-street-art/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-passion" [[https://artur.art/blog-passion/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-souvenir-2" [[https://artur.art/blog-souvenir-2/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-philosophie-3" [[https://artur.art/blog-philosophie-3/]]{
+    - Bouton - Générer votre image 
+}
+class "fr/blog-culture" [[https://artur.art/fr/blog-culture/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-psychologie" [[https://artur.art/blog-psychologie/]]{
+    - Bouton - Générer votre image 
+}
+class "fr/blog-astrologie-et-numerologie" [[https://artur.art/fr/blog-astrologie-et-numerologie/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-religion" [[https://artur.art/blog-religion/]]{
+    - Bouton - Générer votre image 
+}
+class "blog-musique" [[https://artur.art/blog-musique/]]{
+    - Bouton - Générer votre image 
+}
+class "fr/blog-choix-du-nom" [[https://artur.art/fr/blog-choix-du-nom/]] {
+    - Bouton - Générer votre image 
+}
+class "blog-naissance" [[https://artur.art/blog-naissance/]] {
+    - Bouton - Générer votre image 
+}
+class "fr/blog-anniversaire" [[https://artur.art/fr/fr/blog-anniversaire/]] {
+    - Bouton - Générer votre image 
+}
+class "blog-demande-en-mariage" [[https://artur.art/blog-demande-en-mariage/]] {
+    - Bouton - Générer votre image 
+}
+class "blog-heros-denfance" [[https://artur.art/blog-heros-denfance/]] {
+    - Bouton - Générer votre image 
+}
+class "blog-photos-memorable" [[https://artur.art/blog-photos-memorable/]] {
+    - Bouton - Générer votre image 
+}
+class "blog-marques-preferees" [[https://artur.art/blog-marques-preferees/]] {
+    - Bouton - Générer votre image 
+}
+class "fr/blog-artist-favoris" [[https://artur.art/fr/blog-artist-favoris/]] {
+    - Bouton - Générer votre image 
+}
+class "blog-liberte-2" [[https://artur.art/blog-liberte-2]] {
+    - Bouton - Générer votre image 
+}
+class "blog-equality" [[https://artur.art/blog-equality]] {
+    - Bouton - Générer votre image 
+}
+class "blog-protection-de-la-vie" [[https://artur.art/blog-protection-de-la-vie]] {
+    - Bouton - Générer votre image 
+}
+class "blog-feministe" [[https://artur.art/blog-feministe]] {
+    - Bouton - Générer votre image 
+}
+class "blog-ecologiste" [[https://artur.art/blog-ecologiste]] {
+    - Bouton - Générer votre image 
+}
+class "blog-racisme" [[https://artur.art/blog-racisme]] {
+    - Bouton - Générer votre image 
+}
+class "blog-education" [[https://artur.art/blog-education]] {
+    - Bouton - Générer votre image 
+}
+class "fr/blog-crise-identitaire" [[https://artur.art/fr/blog-crise-identitaire]] {
+    - Bouton - Générer votre image 
+}
+class "blog-sexualite" [[https://artur.art/blog-sexualite]] {
+    - Bouton - Générer votre image 
+}
+class "blog-mort" [[https://artur.art/blog-mort]] {
+    - Bouton - Générer votre image 
+}
+class "blog-paix" [[https://artur.art/blog-paix]] {
+    - Bouton - Générer votre image 
+}
+class "blog-salon-2" [[https://artur.art/blog-salon-2]]{
+    - Bouton - Générer votre image
+}
+class "fr/blog-couloir" [[https://artur.art/fr/blog-couloir]]{
+    - Bouton - Générer votre image
+}
+class "blog-salle-de-bain" [[https://artur.art/blog-salle-de-bain]]{
+    - Bouton - Générer votre image
+}
+class "fr/blog-chambre" [[https://artur.art/fr/blog-chambre]]{
+    - Bouton - Générer votre image
+}
+class "fr/blog-bureaux" [[https://artur.art/fr/blog-bureaux]]{
+    - Bouton - Générer votre image
+}
+class "blog-mur-exterieur" [[https://artur.art/blog-mur-exterieur]]{
+    - Bouton - Générer votre image
+}
+class "blog-espace-accueil" [[https://artur.art/blog-espace-accueil/]]{
+    - Bouton - Générer votre image
+}
+class "blog-salle-de-reunion" [[https://artur.art/blog-salle-de-reunion/]]{
+    - Bouton - Générer votre image
+}
+class "blog-espace-de-pause" [[https://artur.art/blog-espace-de-pause/]]{
+    - Bouton - Générer votre image
+}
+
+
+' Navigation depuis page vers page 
+
+'Page d'accueil
+"Page d'Accueil" -down-> "custom-prints"              : Lien - Personalized Prints
+"Page d'Accueil" -down-> "custom-prints"              : Lien - Custom Portraits
+"Page d'Accueil" -down-> "custom-prints"              : Lien - Bespoke Mural
+"Page d'Accueil" -down-> "the-gift-that-brings-tears" : Lien - Personalized Gifts
+"Page d'Accueil" -down-> "the-gift-that-brings-tears" : Lien - Offering Emotion
+"Page d'Accueil" -down-> "shop_v2"                    : Lien - Original Artworks 
+"Page d'Accueil" -down-> "artists-new"                : Lien - Prints for Living Artists
+"Page d'Accueil" -down-> "artists-new"                : Lien - Featured Artists
+"Page d'Accueil" -down-> "discover-approaches"        : Lien - Join Artur
+"Page d'Accueil" -down-> "fr/design-interieur"        : Lien - Interior design
+"Page d'Accueil" -down-> "art-quote"                  : Lien - Request a Quote
+"Page d'Accueil" -down-> "tutorial-page"              : Lien - Tutorial and Study cases
+"Page d'Accueil" -down-> "our-story"                  : Lien - Our Story
+"Page d'Accueil" -down-> "contact-us"                 : Lien - Contact us
+"Page d'Accueil" -down-> "fr/art-vs-ia-v1"            : Lien - Art vs IA
+"Page d'Accueil" -down-> "blog-art-and-democracy"     : Lien - Art Democracy
+"Page d'Accueil" -down-> "abstract-art-v2"            : Lien - Abstract
+"Page d'Accueil" -down-> "street-art-v2"              : Lien - Street
+"Page d'Accueil" -down-> "pop-art-v2"                 : Lien - Pop
+"Page d'Accueil" -down-> "impressionism-art-v2"       : Lien - Impressionnism
+"Page d'Accueil" -down-> "minimalist-art-v2"          : Lien - Minimalism
+"Page d'Accueil" -down-> "surrealist-art-v2"          : Lien - Surrealism
+"Page d'Accueil" -down-> "vive-la-parodie-2"          : Lien - Crticial Engagement
+"Page d'Accueil" -down-> "mon-style-dart-2"           : Lien - Thematic Stylistics
+"Page d'Accueil" -down-> "message-de-lart"            : Lien - Life Mission
+"Page d'Accueil" -down-> "lart-et-soi-2"              : Lien - Energies and Art
+"Page d'Accueil" -down-> "fr/art-du-detournement"     : Lien - Memorable Nostalgia
+"Page d'Accueil" -down-> "service-art"                : Catégorie - Services 
+
+"Page d'Accueil" -down-> "selection-style" : Bouton - Art Swiper 
+"Page d'Accueil" -down-> "selection-style" : Bouton - Bespoke (dessous Canvas) 
+"Page d'Accueil" -down-> "selection-style" : Bouton - Bespoke (dessous Mural) 
+"Page d'Accueil" -down-> "selection-style" : Bouton - Bespoke (dessous Poster) 
+"Page d'Accueil" -down-> "selection-style" : Bouton - Inventory (dessous Canvas) 
+"Page d'Accueil" -down-> "selection-style" : Bouton - Inventory (dessous Poster) 
+"Page d'Accueil" -down-> "custom-prints"   : Bouton - Next (après avoir choisir style) 
+"Page d'Accueil" -down-> "selection-style" : Bouton - Search by style? 
+"Page d'Accueil" -down-> "Page d'Accueil"  : Bouton - Search by Quizz?
+"Page d'Accueil" -down-> "Page d'Accueil"  : Bouton - FAQ about prints?
+"Page d'Accueil" -down-> "Page d'Accueil"  : Bouton - FAQ about paintings?
+"Page d'Accueil" -down-> "Page d'Accueil"  : Bouton - FAQ about Murals? 
+
+"Page d'Accueil" -down-> "fr/art-du-detournement"     : Bouton - Collaboration 
+"Page d'Accueil" -down-> "the-gift-that-brings-tears" : Bouton - Durability
+"Page d'Accueil" -down-> "lart-et-soi-2"              : Bouton - Authenticity     
+"Page d'Accueil" -down-> "message-de-lart"            : Bouton - Inclusivity
+"Page d'Accueil" -down-> "vive-la-parodie-2"          : Bouton - Humor  
+"Page d'Accueil" -down-> "mon-style-dart-2"           : Bouton - Creativity  
+"Page d'Accueil" -down-> "artists-new"                : Bouton - How to Create with an Artist? 
+"Page d'Accueil" -down-> "art-quote"                  : Bouton - Request A quote?  
+"Page d'Accueil" -down-> "boutique"                   : Bouton - Buy existing works on Artur. 
+"Page d'Accueil" -down-> "tutorial-page"              : Bouton - How to design on AI? 
+"Page d'Accueil" -down-> "Bubble"                     : Input Texte - Question (remplir deux questions)  
+"Page d'Accueil" -down-> "Alice - Interior Designer"  : Lien - Alice - Interior Designer
+"Page d'Accueil" -down-> "Dagenais Family"            : Lien - Dagenais Family  
+"Page d'Accueil" -down-> "David - Financial advisor"  : Lien - David - Financial advisor   
+
+
+'Page custom-prints
+"custom-prints" -down-> "selection-style" : Bouton - Starts at 20$ 
+"custom-prints" -down-> "selection-style" : Bouton - Starts at 200$
+"custom-prints" -down-> "selection-style" : Bouton - Starts at 2000$
+"custom-prints" -down-> "selection-style" : Bouton - Select :Print: 
+"custom-prints" -down-> "selection-style" : Bouton - Select :Tableau: 
+"custom-prints" -down-> "selection-style" : Bouton - Select :Mural: 
+
+'Page selection-style
+"selection-style" -down-> "tinder-de-lart"  : Bouton - Suivant: 
+"selection-style" -down-> "selection-style" : Bouton - Je ne sais pas: 
+
+'Page tinder-de-lart
+"tinder-de-lart" -down-> "selection-couleurs" : Boutons :Après 10 choix: 
+
+'Page selection-couleurs
+"selection-couleurs" -down-> "psycho-creatif" : Bouton - Suivant: 
+
+'Page psycho-créatif 
+"psycho-creatif" -down-> "image-generation-3" : Bouton - vertical
+"psycho-creatif" -down-> "image-generation-3" : Bouton - square 
+"psycho-creatif" -down-> "image-generation-3" : Bouton - horizontal
+
+'Page image-generation-3 
+"image-generation-3" -down-> "selection-approache" : Bouton - Répondre à deux questions
+"image-generation-3" -down-> "image-generation-2" : Bouton - Soumettre une image
+
+'Page selection-approache
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Par message
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Pour offrir
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Par identité 
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Pour chaque endroit 
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Par style 
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Détournement
+"selection-approache" -down-> "selection-sous-approache" : Bouton - Parody
+
+'Page selection-sous-approache
+"selection-sous-approache" -down-> "image-generation-2" : Bouton - Suivant
+
+'Page image-generation-2
+"image-generation-2" -down-> "pagesdevente-copy-2" : Bouton - Suivant
+
+'Page choix des caractéristiques de l'item qu'on ajoute au panier
+"pagesdevente-copy-2" -down-> "xproduction_processusvente_saoussenarfaoui-copy-copy" : Bouton - Commander
+
+'Page voir les items du panier et pouvoir rajouter ou enlever 
+"xproduction_processusvente_saoussenarfaoui-copy-copy" -down-> "xproduction_processusvente_saoussenarfaoui-copy" : Bouton - Procéder au paiement
+
+
+' Blogue niveau à deux degrés de image-generation
+"the-gift-that-brings-tears" -down-> "fr/blog-choix-du-nom" : Select - :En-dessous de Name Selection: 
+"the-gift-that-brings-tears" -down-> "blog-naissance" : Select - :En-dessous de Birth: 
+"the-gift-that-brings-tears" -down-> "fr/blog-anniversaire" : Select - :En-dessous de Birthday: 
+"the-gift-that-brings-tears" -down-> "blog-demande-en-mariage" : Select - :En-dessous de Proposal: 
+
+' Blogue niveau à un degré de image-generation
+"fr/blog-choix-du-nom" -down-> "image-generation-2" : Bouton - Générer votre image
+"blog-naissance" -down-> "image-generation-2" : Bouton - Générer votre image
+"fr/blog-anniversaire" -down-> "image-generation-2" : Bouton - Générer votre image
+"blog-demande-en-mariage" -down-> "image-generation-2" : Bouton - Générer votre image
+
+'Page découvrir les nouveaux artistes
+"artists-new" -down-> "Bubble_Swipe"  : Bouton - Artists
+"artists-new" -down-> "tutorial-page" : Bouton - Tutorial-page
+
+' Blogue niveau à trois degrés de image-generation 
+"discover-approaches" -down-> "fr/art-du-detournement" : Bouton - Learn more :en-dessous de The Art of Diversion:
+"discover-approaches" -down-> "lart-et-soi-2" : Bouton - Learn more :en-dessous de Art and Self:
+"discover-approaches" -down-> "the-gift-that-brings-tears" : Bouton - Learn more :en-dessous de The gift that makes you cry:
+"discover-approaches" -down-> "message-de-lart" : Bouton - Learn more :en-dessous de Message of art:
+"discover-approaches" -down-> "mon-style-dart-2" : Bouton - Learn more :en-dessous de My art style:
+"discover-approaches" -down-> "vive-la-parodie-2" : Bouton - Learn more :en-dessous de Long live parody:
+
+' Blogue niveau à deux degrés de image-generation 
+"vive-la-parodie-2" -down-> "blog-parody" : Bouton - Select :en-dessous de Parody:
+"vive-la-parodie-2" -down-> "blog-parlons-politique" : Bouton - Select :en-dessous de Let’s Talk Politics:    
+"vive-la-parodie-2" -down-> "fr/blog-critique-profonde" : Bouton - Select :en-dessous de Deep Critique:
+"vive-la-parodie-2" -down-> "fr/blog-art-humour" : Bouton - Select :en-dessous de The Art of Humor:
+
+' Blogue niveau à un degré de image-generation
+"blog-parody" -down-> "image-generation-2" : Bouton - Générer votre image
+"blog-parlons-politique" -down-> "image-generation-2" : Bouton - Générer votre image
+"fr/blog-critique-profonde" -down-> "image-generation-2" : Bouton - Générer votre image
+"fr/blog-art-humour" -down-> "image-generation-2" : Bouton - Générer votre image
+
+' Blogue niveau à deux degrés de image-generation
+"fr/art-du-detournement" -down-> "blog-heros-denfance" : Bouton - Select :en-dessous de Mes Héros d’Enfance:
+"fr/art-du-detournement" -down-> "blog-photos-memorable" : Bouton - Select :en-dessous de Mes Photos Mémorables:
+"fr/art-du-detournement" -down-> "blog-marques-preferees" : Bouton - Select :en-dessous de Mes Marques Préférées:
+"fr/art-du-detournement" -down-> "fr/blog-artist-favoris" : Bouton - Select :en-dessous de Mes Artistes Favoris
+
+' Blogue niveau à un degré de image-generation
+"blog-heros-denfance"    -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-photos-memorable"  -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-marques-preferees" -down-> "image-generation-2" : Bouton - Générer votre image 
+"fr/blog-artist-favoris" -down-> "image-generation-2" : Bouton - Générer votre image 
+
+' Blogue niveau à deux degrés de image-generation
+"message-de-lart" -down-> "blog-liberte-2" : Select - :En-dessous de Freedom : 
+"message-de-lart" -down-> "blog-equality" : Select - :En-dessous de Equality :
+"message-de-lart" -down-> "blog-protection-de-la-vie" : Select - :En-dessous de Protection of Life :
+"message-de-lart" -down-> "blog-feministe" : Select - :En-dessous de Feministe :
+"message-de-lart" -down-> "blog-ecologiste" : Select - :En-dessous de Environmentalist :
+"message-de-lart" -down-> "blog-racisme" : Select - :En-dessous de Racism and Black Lives :
+"message-de-lart" -down-> "blog-education" : Select - :En-dessous de Education :
+"message-de-lart" -down-> "fr/blog-crise-identitaire" : Select - :En-dessous de Gender Identity Crisis :
+"message-de-lart" -down-> "blog-sexualite" : Select - :En-dessous de Sexuality :
+"message-de-lart" -down-> "blog-mort" : Select - :En-dessous de Death, Addiction, and Depression :
+"message-de-lart" -down-> "blog-paix" : Select - :En-dessous de Peace :
+
+' Blogue niveau à un degré de image-generation
+"blog-liberte-2"            -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-equality"             -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-protection-de-la-vie" -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-feministe"            -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-ecologiste"           -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-racisme"              -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-education"            -down-> "image-generation-2" : Bouton - Générer votre image 
+"fr/blog-crise-identitaire" -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-sexualite"            -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-mort"                 -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-paix"                 -down-> "image-generation-2" : Bouton - Générer votre image 
+
+
+' Blogue niveau à deux degrés de image-generation
+"mon-style-dart-2" -down-> "blog-paysage-mer-et-ciel" : Bouton - Select :en-dessous de Paysage, mer et ciel:
+"mon-style-dart-2" -down-> "blog-abstrait-et-conceptuel" : Bouton - Select :en-dessous de Abstrait et conceptuel:
+"mon-style-dart-2" -down-> "blog-animaux-oiseaux" : Bouton - Select :en-dessous de Animaux, oiseaux:
+"mon-style-dart-2" -down-> "blog-personnes-et-portraits" : Bouton - Select :en-dessous de Personnes et portraits:
+"mon-style-dart-2" -down-> "blog-fleurs-et-plantes-2" : Bouton - Select :en-dessous de Fleurs et plantes:
+"mon-style-dart-2" -down-> "blog-architecture-et-villes" : Bouton - Select :en-dessous de Architecture et villes:
+"mon-style-dart-2" -down-> "blog-nu-et-erotique" : Bouton - Select :en-dessous de Nu et érotique:
+"mon-style-dart-2" -down-> "blog-transport-et-cartes" : Bouton - Select :en-dessous de Transport et cartes:    
+"mon-style-dart-2" -down-> "blog-impressionniste" : Bouton - Select :en-dessous de Impressionniste:
+"mon-style-dart-2" -down-> "blog-street-art" : Bouton - Select :en-dessous de Street Art:
+
+' Blogue niveau à un degré de image-generation
+"blog-paysage-mer-et-ciel"    -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-abstrait-et-conceptuel" -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-animaux-oiseaux"        -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-personnes-et-portraits" -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-fleurs-et-plantes-2"    -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-architecture-et-villes" -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-nu-et-erotique"         -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-transport-et-cartes"    -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-impressionniste"        -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-street-art"             -down-> "image-generation-2" : Bouton - Générer votre image 
+ 
+' Blogue niveau à deux degrés de image-generation
+"lart-et-soi-2" -down-> "blog-passion" : Bouton - Select :en-dessous de By Passions:
+"lart-et-soi-2" -down-> "blog-souvenir-2" : Bouton - Select :en-dessous de By Memories:
+"lart-et-soi-2" -down-> "blog-philosophie-3" : Bouton - Select :en-dessous de By Philosophies:
+"lart-et-soi-2" -down-> "fr/blog-culture" : Bouton - Select :en-dessous de By Culture:
+"lart-et-soi-2" -down-> "blog-psychologie" : Bouton - Select :en-dessous de By By Psychology:
+"lart-et-soi-2" -down-> "fr/blog-astrologie-et-numerologie" : Bouton - Select :en-dessous de By By Astrology or Numerology:
+"lart-et-soi-2" -down-> "blog-religion" : Bouton - Select :en-dessous de By By Religion:
+"lart-et-soi-2" -down-> "blog-musique" : Bouton - Select :en-dessous de By By Music:
+
+
+' Blogue niveau à un degré de image-generation
+"blog-passion"                      -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-souvenir-2"                   -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-philosophie-3"                -down-> "image-generation-2" : Bouton - Générer votre image 
+"fr/blog-culture"                   -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-psychologie"                  -down-> "image-generation-2" : Bouton - Générer votre image 
+"fr/blog-astrologie-et-numerologie" -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-religion"                     -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-musique"                      -down-> "image-generation-2" : Bouton - Générer votre image 
+"blog-musique"                      -down-> "image-generation-2" : Bouton - Générer votre image 
+
+
+' Blogue niveau à deux degrés de image-generation
+"fr/design-interieur" -down-> "blog-salon-2"       : Bouton - Selectionner :en-dessous de Salon:
+"fr/design-interieur" -down-> "fr/blog-couloir"    : Bouton - Select :en-dessous de Couloir:
+"fr/design-interieur" -down-> "blog-salle-de-bain" : Bouton - Select :en-dessous de Salle de bain:
+"fr/design-interieur" -down-> "fr/blog-chambre"    : Bouton - Select :en-dessous de Chambre:
+"fr/design-interieur" -down-> "fr/blog-bureaux"    : Bouton - Select :en-dessous de Bureau:
+"fr/design-interieur" -down-> "blog-mur-exterieur" : Bouton - Select :en-dessous de Mur d'extérieur:
+    
+' Blogue niveau à un degré de image-generation
+"blog-salon-2"       -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Salon:
+"fr/blog-couloir"    -down-> "image-generation-2" : Bouton - Select :en-dessous de Couloir:
+"blog-salle-de-bain" -down-> "image-generation-2" : Bouton - Select :en-dessous de Salle de bain:
+"fr/blog-chambre"    -down-> "image-generation-2" : Bouton - Select :en-dessous de Chambre:
+"fr/blog-bureaux"    -down-> "image-generation-2" : Bouton - Select :en-dessous de Bureau:
+"blog-mur-exterieur" -down-> "image-generation-2" : Bouton - Select :en-dessous de Mur d'extérieur:
+
+' Blogue niveau à deux degrés de image-generation
+"service-art" -down-> "blog-espace-accueil"   : Bouton - Selectionner :en-dessous de Espace d'Accueil
+"service-art" -down-> "fr/blog-couloir"       : Bouton - Selectionner :en-dessous de Couloir:
+"service-art" -down-> "fr/blog-bureaux"       : Bouton - Selectionner :en-dessous de Bureaux:
+"service-art" -down-> "blog-salle-de-reunion" : Bouton - Selectionner :en-dessous de Salle de réunion:
+"service-art" -down-> "blog-espace-de-pause"  : Bouton - Selectionner :en-dessous de Espace de pause:
+"service-art" -down-> "blog-mur-exterieur"    : Bouton - Selectionner :en-dessous de Mur d'extérieur:
+
+' Blogue niveau à un degré de image-generation
+"blog-espace-accueil"   -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Espace d'Accueil:
+"fr/blog-couloir"       -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Couloir:
+"fr/blog-bureaux"       -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Bureaux:
+"blog-salle-de-reunion" -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Salle de réunion:
+"blog-espace-de-pause"  -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Espace de pause:
+"blog-mur-exterieur"    -down-> "image-generation-2" : Bouton - Selectionner :en-dessous de Mur d'extérieur:
+
+    
+
+'Notes associées à des pages 
+note top of "Page d'Accueil"
+    Ceci représente la page d'accueil et tous les éléments 
+    qui permettent de naviguer vers d'autres pages
+
+    Les liens avec <del>une barre qui traverse</del> indique que le lien ou le bouton ne mène nulle part    
+end note
+
+note bottom of "impressionism-art-v2"
+    Message qui s'affiche dans la page : 
+        " This page doesn't seem to exist.
+           It looks like the link pointing here was faulty. Maybe try searching?
+        "
+end note
+
+note left of "vive-la-parodie-2"
+    Nom de page en francais et contenu en anglais 
+end note
+
+note top of "message-de-lart"
+    Nom de page en francais et contenu en anglais 
+end note
+
+note right of "the-gift-that-brings-tears"
+    Couleur du texte en blanc illisible sur le fond pâle 
+end note
+
+note top of "lart-et-soi-2"
+    Nom de page en francais et contenu en anglais 
+end note
+
+note right of "fr/art-du-detournement"
+    Nom du lien 'Memorable Nostalgia' en anglais et contenu et titre de la page en francais 
+end note
+
+note top of "fr/design-interieur"
+    Nom du lien 'Interior design' en anglais et contenu et titre de la page en francais 
+end note
+
+note bottom of "service-art"
+    N'est visible que si on clique sur la catégorie Services  
+end note
+
+note bottom of "boutique"
+    Donne l'erreur 403   
+end note
+
+note bottom of "selection-sous-approache"
+    La page affichée est mauvaise : il s'agit de l'aperçu elementor. Il faut mettre le lien vers la vraie page.
+    Regardez l'URL pour constater : https://artur.art/selection-sous-approache/?preview_id=27502&preview=true?post=27502&action=elementor
+end note
+
+note left of "image-generation-2"
+    On redemande le taille de l'image alors qu'on l'avait demandé à la page psycho créatif
+end note
+
+note bottom of "blog-religion"
+    Gros bug qui est potentiellement en lien avec l'animation 
+end note
+
+note bottom of "blog-philosophie-3"
+    Texte blanc illisible sur le fond  
+end note
+
+note top of "blog-feministe"
+    Texte blanc illisible sur le fond  
+end note
+
+note bottom of "blog-espace-accueil"
+    Texte blanc illisible sur le fond  
+end note
+
+note bottom of "blog-salle-de-reunion"
+    Texte blanc illisible sur le fond  
+end note
+
+
+@enduml

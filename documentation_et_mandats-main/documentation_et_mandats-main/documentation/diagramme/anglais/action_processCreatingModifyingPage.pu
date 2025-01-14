@@ -1,0 +1,89 @@
+@startuml "action_creatingModifyingPage"
+
+title Process of creating or modifying a page
+
+start
+:Consult the assigned mandate
+(repository: mandats_artur);
+
+note right
+    For now, we operate via Discord 
+    where you need to request a mandate in the channel
+    ([[https://discord.com/channels/1097611222981038220/1237049892694921390 General]])
+  end note
+
+if (Modify a page or Create a page?) then
+  -> Modify a page;
+  :Copy the original page with EADuplicator;
+  :Create a new branch from the \n blocJavascript_elementor branch;
+  :Push your branch to the remote repository;
+  :Make the requested modifications in the \n javascript file and in the elementor block;
+  note right
+    Ensure there is only one block containing javascript 
+    
+    Only add javascript to the elementor javascript block 
+    unless there's an exception (ask before).
+
+    The content of the javascript file in the folder and the elementor block 
+    must be the same, except for the <script></script> tags, which are only 
+    present in the elementor javascript block.
+
+    Do not change the name of the js file in the folder 
+    of the page you are modifying. 
+  end note
+
+else
+  -> Create a page;
+  :Create the page in Elementor;
+  :Create the elementor JS block (see how to do it correctly);
+  :Create a new branch from the \n blocJavascript_elementor branch;
+  :Push your branch to the remote repository;
+  :Create the folder with the name of the page\nand the javascript file with\nthe URL ID (when editing with Elementor);
+  note right
+    Copy the code from the modeleDeBase.js file directly 
+    into the js file you just created.
+
+    Ensure there is only one block containing javascript.
+
+    Both files must have the same content (except for the 
+    <script></script> tags at the beginning and end of the elementor html block 
+    containing the javascript).
+  end note
+  
+endif
+
+
+:Test the changes;
+
+:Start documenting, create diagrams, and write the main comments;
+
+repeat
+  :Read the comments received and make the necessary changes;
+  :Make a pull request to the branch blocJavascript_elementor;
+  :Notify in Discord in this channel and wait for comments ([[https://discord.com/channels/1097611222981038220/1295184748729077862 review channel]]); 
+  :In the meantime, complete the documentation, refine the diagrams;
+while (I received comments asking me to improve)
+
+  :Refine the comments if necessary;
+
+  if (Modify a page or Create a page?) then
+    -> Modify a page;
+      :Delete the page copy;
+      note right
+        Do this only if everything has been tested and validated
+      end note
+    else
+    -> Create a page;
+      :Ensure the URL and page name are appropriate;
+      note right
+        Check the conventions for the page name in Elementor 
+        Consult the method to modify the URL
+        Have the page URL name validated in this channel ([[https://discord.com/channels/1097611222981038220/1310264690517086288 review channel]])
+      end note
+  endif
+
+:Request a new mandate;
+
+stop
+
+@enduml

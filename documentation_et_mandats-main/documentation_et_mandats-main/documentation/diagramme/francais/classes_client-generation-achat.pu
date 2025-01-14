@@ -1,0 +1,182 @@
+@startuml classe_client
+
+enum FormatImage {
+    VERTICAL
+    CARRE
+    HORIZONTAL
+}
+
+class Client {
+- generationsImage : List<GenerationImage>
+- coordonnee : Coordonne 
+- adresse : Adresse 
++ AjouterSupportPanier() : String 
++ ChoisirImageGeneree()
++ GenererIdentiteArtistique() : String 
++ ObtenirContexteGenerationImage() : ContexteGeneration
++ GenererImage() : GenerationImage
++ ModifierCoordonne() : Bool
++ ModifierAdresse() : Bool
++ AfficherErreur() : String
+}
+
+class Adresse {
+   - pays : String 
+   - provinceEtat : String
+   - ville : String
+   - codePostal : String  
+   - rue : String 
+   - numero : String 
+   - appartement : bool 
+}
+
+class Coordonnee {
+- telephonePrincipal : String 
+- telephoneTravail : String  
+- courrielPrincipal : String
+- courrielTravail : String 
+- numeroFax : String
+}
+
+class ReponseGeneration {
+- imagesGeneree : List<ImageGeneree>?
+- messageErreur : String?
+- codeReponse : String 
+}
+
+class ContexteGeneration {
+- sourceGeneration : SourceGeneration 
+- formatImage : FormatImage
+- styleArt : String
+- oeuvreApprecier : List<Oeuvre>
+- oeuvreAimer : List<Oeuvre>
+- oeuvrePasAimer : List<Oeuvre>
+- styleCouleur : String
+- theme : String 
+- sousTheme : String 
+- urlImageReference : String?
+- reponseQuestionUn : String?
+- reponseQuestionDeux : String?
+}
+
+class Oeuvre {
+- createur : Artiste 
+- nom : String 
+- prix : Int 
+- style : String 
+- description : String 
+- taille : Int 
+- poidsEnG : Int 
+- statut : String 
+- localisation : String 
+- date : Int   
+}
+
+class Artiste {
+- nom : String 
+- coordonnee : Coordonnee  
+- listeOeuvres : List<Oeuvre>
+- listeOpportunites : List<Opportunite>
+- listeActivite : List<Activite>
+}
+
+class Opportunite {
+- nom : String 
+- tauxHoraire : Int 
+- tauxParOeuvre : Int 
+- statut : Bool
+}
+
+class Activite {
+- commandeClient : CommandeClient  
+- date : Int 
+}
+
+class CommandeClient {
+- client : Client
+- description : String
+- typeOeuvre : String  
+- statut : String 
+- echeance : Int    
+}
+
+class Panier {
+- listeSupportImage : List<SupportImage>
+- prixAvantTaxe : Int
+- prixTaxe : Int 
+- prixTotalAvecTaxe : Int 
++ CalculerTotal() : Int
++ EnclencherPaiement() : Bool
+}
+
+class Commande {
+- panier : Panier
+- destinataire : Client
+- statutPaiement : String 
+- statutLivraison : String 
+- dateLivraison : Int 
+- lienDeSuivi : String 
+}
+
+class SupportImage {
+- support : SupportImpression
+- imageGeneree : ImageGeneree
+}
+
+class SupportImpression {
+- idItem : Int
+- idVariant : Int
+- typeSupport : SupportImpression 
+- taille : String 
+- materiel : String 
+- couleur : String
+- option : List<String>
+- prixUnitaire : Int
+- disponibilite : bool   
++ VerifierDisponibiliteSelonRegion() : bool 
+}
+
+class SourceGeneration {
+- nom : String
+- urlPointAccess : String 
+- externe : bool 
+}
+
+class GenerationImage {
+- contexteGeneration : ContexteGeneration
+- reponseGeneration : ReponseGeneration 
+- date : Int 
+}
+
+class ImageGeneree {
+- url : String
+- taille : Int
+- format : String
+}
+
+Client --> GenerationImage : Demande
+Client --> Coordonnee : Possède
+Client --> Adresse : Habite à
+Client --> Panier : Ajoute à
+
+Panier --> SupportImage : Contient
+SupportImage --> SupportImpression : Contien
+SupportImage --> ImageGeneree : Utilise
+
+GenerationImage --> ContexteGeneration : Contient
+ContexteGeneration --> FormatImage : Contient
+GenerationImage --> SourceGeneration : Contient 
+GenerationImage --> ReponseGeneration : Contient
+ReponseGeneration --> ImageGeneree : Contient
+Commande --> Panier : Contient 
+Commande --> Client : Contient
+Artiste --> Opportunite : Disponible pour 
+Artiste --> Activite : Fait 
+Artiste --> Oeuvre : Creer
+Activite --> CommandeClient : Contient
+
+  note right of ContexteGeneration
+    Emmagasiné dans les cookies
+    end note
+
+@enduml

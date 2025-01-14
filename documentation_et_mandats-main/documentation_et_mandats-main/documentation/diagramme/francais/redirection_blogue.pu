@@ -1,0 +1,43 @@
+@startuml redirection_depuis_blogue
+
+title Redirection à partir du choix des blogues 
+
+start
+
+:Ouvrir la page image-generation-3;
+
+if (L'utilisateur a une sous-approche sauvegardée ?) then (Oui)
+    note left 
+      Si l'utilisateur vient d'un blogue, il n'aura pas 
+      d'apporche sauvegardé. Seulement la sous-approche.
+      Ça permettra de le distinguer d'un utilisateur ayant
+      déjà passé à travers le processus de caractérisation.
+    end note
+    if (L'utilisateur a une approche sauvegardée ?) then (Oui)   
+        :Rediriger vers la page du choix de l'approche;
+    else (Non)
+        
+        if (Le mode de génération est déjà enregistré ?) then (Oui)
+            :Rediriger vers la page du choix de l'approche;
+            note left
+            On redirige vers le choix de l'approche car 
+            l'utilisateur a déjà passé une fois à travers 
+            le processus et pourrait vouloir changer d'approche
+           end note
+        else (Non)
+            :Rediriger vers image-generation-2;
+            stop
+        endif
+    endif
+else (Non)
+    :Rediriger vers la page du choix de l'approche;
+endif
+
+
+stop
+
+note left 
+      Rond noir entouré de blanc signifie la fin du processus
+end note    
+
+@enduml
